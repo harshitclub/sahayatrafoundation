@@ -1,0 +1,18 @@
+.donateNowBtn {
+  background-color: #ffc107;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  color: rgb(77, 73, 73);
+  border-radius: 9999px;
+}
+
+.donateNowBtn:hover {
+  background-color: #c2950d;
+  transition: 0.2s all ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  .donateNowBtn {
+    padding: 0.5rem 1rem;
+  }
+}
