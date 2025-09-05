@@ -1,10 +1,20 @@
+"use client";
 import Image from "next/image";
 import "./style.css";
 import logo from "@/media/logo.png";
 import Link from "next/link";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 import DonateBtn from "@/components/local/buttons/donateBtn/DonateBtn";
+import { useState } from "react";
 export default function Navbar() {
+  const [navOpen, setNavOpen] = useState(false);
+  const toggleNav = () => {
+    if (!navOpen) {
+      setNavOpen(true);
+    } else {
+      setNavOpen(false);
+    }
+  };
   return (
     <>
       <header className="w-full flex justify-center">
@@ -12,14 +22,44 @@ export default function Navbar() {
           <div className="logo flex items-center justify-center py-3">
             <Image src={logo} alt="Saha Yatra Foundation Logo" />
           </div>
-          <div className="menu flex items-center justify-end gap-10">
+          <div
+            className={`menu flex items-center justify-end gap-10 ${
+              navOpen ? "navActive" : ""
+            }`}
+          >
             <ul className="flex gap-7">
               <li>
                 <Link href="#">Home</Link>
               </li>
-              <li>
+              <li className="desktopHide">
+                <Link href="#">What We Do</Link>
+              </li>
+
+              <li className="desktopHide">
+                <Link href="#">About Us</Link>
+              </li>
+              <li className="desktopHide">
+                <Link href="#">Vision & Mission</Link>
+              </li>
+              <li className="desktopHide">
+                <Link href="#">Our Approach</Link>
+              </li>
+              <li className="desktopHide">
+                <Link href="#">Our Impact</Link>
+              </li>
+              <li className="desktopHide">
+                <Link href="#">Donate</Link>
+              </li>
+              <li className="desktopHide">
+                <Link href="#">Volunteer</Link>
+              </li>
+              <li className="desktopHide">
+                <Link href="#">Partner With Us</Link>
+              </li>
+
+              <li className="mobileHide">
                 What We Do <ChevronDown className="inline-block" />
-                <ul>
+                <ul className="mobileHide">
                   <li>
                     <Link href="#">Education &amp; Skill Development</Link>
                   </li>
@@ -37,12 +77,12 @@ export default function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li>
+              <li className="mobileHide">
                 <Link href="#">
                   Who We Are <ChevronDown className="inline-block" />
                 </Link>
 
-                <ul>
+                <ul className="mobileHide">
                   <li>
                     <Link href="#">About Us</Link>
                   </li>
@@ -57,11 +97,11 @@ export default function Navbar() {
                   </li>
                 </ul>
               </li>
-              <li>
+              <li className="mobileHide">
                 <Link href="#">
                   Get Involved <ChevronDown className="inline-block" />
                 </Link>
-                <ul>
+                <ul className="mobileHide">
                   <li>
                     <Link href="#">Donate</Link>
                   </li>
@@ -83,8 +123,8 @@ export default function Navbar() {
             <DonateBtn />
           </div>
           <div className="navToggleBtnBox desktopHide">
-            <button className="navToggleBtn">
-              <Menu size={40} />
+            <button className="navToggleBtn" onClick={toggleNav}>
+              {navOpen ? <X size={40} /> : <Menu size={40} />}
             </button>
           </div>
         </nav>

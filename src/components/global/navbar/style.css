@@ -81,7 +81,35 @@ header > nav > .menu > ul > li > ul > li:hover {
     height: 5rem;
   }
   header > nav > .menu {
-    display: none;
+    /* display: none; */
+    background-color: var(--mainColor);
+    left: -100%;
+    top: 5rem;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.5rem;
+    gap: 1rem;
+    width: 50%;
+    transition: 0.3s all ease-in-out;
+  }
+  .navActive {
+    left: 0 !important;
+  }
+  header > nav > .menu > ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  header > nav > .menu > ul > li {
+    font-size: 1rem;
+    background-color: #700f29;
+    padding: 0.5rem;
+  }
+  header > nav > .menu > ul > li > a {
+    font-size: 1rem;
   }
   header > nav > .logo {
     width: 50%;
@@ -104,5 +132,14 @@ header > nav > .menu > ul > li > ul > li:hover {
   }
   .desktopHide {
     display: block;
+  }
+
+  .mobileHide {
+    display: none;
+  }
+
+  .mobileNavBorder {
+    border-bottom: 1px solid grey;
+    width: 100%;
   }
 }
