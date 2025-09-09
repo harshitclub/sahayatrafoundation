@@ -125,7 +125,7 @@
   /* color variables */
   --mainColor: #7c122e;
   --mainWhite: #fff;
-  --mainWhiteBg: #f9f9f9;
+  --mainWhiteBg: #e5e5e5;
   --mainText: #171717;
   --mainDarkBg: #262626;
 }
@@ -153,4 +153,9 @@ h6 {
 
 .width90 {
   width: 90%;
+}
+
+/* font */
+.fontCaveat {
+  font-family: var(--font-caveat);
 }
