@@ -7,6 +7,38 @@ import womenEmpowerment from "@/media/whatWeDo/womenEmpowerment.jpg";
 import education from "@/media/whatWeDo/education.jpg";
 import Image from "next/image";
 export default function WhatWeDo() {
+  const data = [
+    {
+      id: 1,
+      title: "Education & Skill Development",
+      desc: "We help children and youth unlock their potential through learning support, digital literacy, career guidance, and vocational training—bridging the gap between education and employability.",
+      img: education,
+    },
+    {
+      id: 2,
+      title: "Women Empowerment",
+      desc: "We empower women with skills in tailoring, handicrafts, food processing, and digital tools—supporting them to build small businesses, self-help groups, and independent livelihoods.",
+      img: womenEmpowerment,
+    },
+    {
+      id: 3,
+      title: "Legal Awareness & Protection",
+      desc: "Through awareness drives on POSH & POCSO, workplace rights, and women’s safety, we educate communities on their legal rights and connect them with experts for guidance and protection.",
+      img: legal,
+    },
+    {
+      id: 4,
+      title: "Health & Well-Being",
+      desc: "We promote healthier communities with programs on nutrition, hygiene, mental wellness, and preventive care, while also providing access to medical camps and consultations.",
+      img: health,
+    },
+    {
+      id: 5,
+      title: "Entrepreneurship & Livelihoods",
+      desc: "We nurture grassroots entrepreneurship with training, mentoring, and market access—helping individuals turn skills into sustainable businesses and secure livelihoods",
+      img: livelihood,
+    },
+  ];
   return (
     <>
       <section className="whatWeDo w-full flex items-center justify-center py-20">
@@ -15,124 +47,40 @@ export default function WhatWeDo() {
             What We <span className="fontCaveat text-[#7c122e]">Do</span>
             <span className="block w-16 h-1 bg-[#7c122e] mx-auto mt-4 rounded-full"></span>
           </h2>
-          <div className="whatWeDoTabs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="whatWeDoTab">
-              <Image
-                src={education}
-                alt="Education & Skill Development Image"
-                className="mb-2"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Education &amp; Skill Development
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-4 text-justify">
-                  We help children and youth unlock their potential through
-                  learning support, digital literacy, career guidance, and
-                  vocational training—bridging the gap between education and
-                  employability.
-                </p>
-                <Link
-                  href="#"
-                  className="mt-auto text-[#7c122e] font-medium hover:underline"
-                >
-                  Learn More ➝
-                </Link>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {data.map((item) => (
+              <div
+                key={item.id}
+                className="relative w-full h-64 group overflow-hidden rounded-sm shadow-sm"
+              >
+                {/* Image */}
+                <Image
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
+
+                {/* Overlay (Gradient Shade) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/80 to-transparent translate-y-3/4 group-hover:translate-y-0 transition-transform duration-500"></div>
+
+                {/* Content */}
+                <div className="absolute bottom-0 left-0 w-full p-4 text-white z-10">
+                  {/* Heading - always visible */}
+                  <h2 className="text-2xl font-bold">{item.title}</h2>
+
+                  {/* Hidden text + link (show on hover) */}
+                  <div className="opacity-0 max-h-0 group-hover:opacity-100 group-hover:max-h-40 transition-all duration-500 overflow-hidden">
+                    <p className="mt-2 mb-2 text-sm">{item.desc}</p>
+                    <Link
+                      href="#"
+                      className="mt-auto inline-block text-[#ffc107] font-medium hover:underline"
+                    >
+                      Learn More ➝
+                    </Link>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="whatWeDoTab">
-              <Image
-                src={womenEmpowerment}
-                alt="Women Empowerment Image"
-                className="mb-2"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Women Empowerment
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-4 text-justify">
-                  We empower women with skills in tailoring, handicrafts, food
-                  processing, and digital tools—supporting them to build small
-                  businesses, self-help groups, and independent livelihoods.
-                </p>
-                <Link
-                  href="#"
-                  className="mt-auto text-[#7c122e] font-medium hover:underline"
-                >
-                  Learn More ➝
-                </Link>
-              </div>
-            </div>
-            <div className="whatWeDoTab">
-              <Image
-                src={legal}
-                alt="Legal Awareness &amp; Protection Image"
-                className="mb-2"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Legal Awareness &amp; Protection
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-4 text-justify">
-                  Through awareness drives on POSH & POCSO, workplace rights,
-                  and women’s safety, we educate communities on their legal
-                  rights and connect them with experts for guidance and
-                  protection.
-                </p>
-                <Link
-                  href="#"
-                  className="mt-auto text-[#7c122e] font-medium hover:underline"
-                >
-                  Learn More ➝
-                </Link>
-              </div>
-            </div>
-            <div className="whatWeDoTab">
-              <Image
-                src={health}
-                alt="Health &amp; Well-Being Image"
-                className="mb-2"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Health &amp; Well-Being
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-4 text-justify">
-                  We promote healthier communities with programs on nutrition,
-                  hygiene, mental wellness, and preventive care, while also
-                  providing access to medical camps and consultations.
-                </p>
-                <Link
-                  href="#"
-                  className="mt-auto text-[#7c122e] font-medium hover:underline"
-                >
-                  Learn More ➝
-                </Link>
-              </div>
-            </div>
-            <div className="whatWeDoTab">
-              <Image
-                src={livelihood}
-                alt="Entrepreneurship &amp; Livelihoods Image"
-                className="mb-2"
-              />
-              <div className="p-5">
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Entrepreneurship &amp; Livelihoods
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-4 text-justify">
-                  We nurture grassroots entrepreneurship with training,
-                  mentoring, and market access—helping individuals turn skills
-                  into sustainable businesses and secure livelihoods
-                </p>
-                <Link
-                  href="#"
-                  className="mt-auto text-[#7c122e] font-medium hover:underline"
-                >
-                  Learn More ➝
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
