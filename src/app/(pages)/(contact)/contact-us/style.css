@@ -1,0 +1,39 @@
+.contactUs {
+  margin: 6rem 0 0 0;
+}
+.contactUsHeader h1 {
+  color: var(--mainColor);
+}
+
+.contactUsContainer {
+  border-top: 1px solid rgb(187, 182, 182);
+}
+
+.contactUsLeft {
+  width: 50%;
+}
+.contactUsLeft .contactDesc {
+  font-size: 1.2rem;
+}
+.contactUsRight {
+  width: 50%;
+}
+
+.contactUsRight form input,
+textarea {
+  background-color: var(--mainWhite);
+  padding: 1rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 0.3rem;
+}
+
+.contactUsRight form button {
+  width: 100%;
+  background-color: #ffc107;
+  padding: 1rem 0.5rem;
+}
+
+.contactMap iframe {
+  width: 100%;
+}

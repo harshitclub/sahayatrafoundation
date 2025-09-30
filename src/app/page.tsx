@@ -9,13 +9,15 @@ import WhatWeDo from "@/components/local/homepage/whatWeDo/WhatWeDo";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <AboutSection />
-      <ImpactSection />
-      <WhatWeDo />
-      <NewsAndStories />
-      <Partners />
-      <Testimonials />
+      <main>
+        <Hero />
+        <AboutSection />
+        <ImpactSection />
+        <WhatWeDo />
+        <NewsAndStories />
+        <Partners />
+        <Testimonials />
+      </main>
     </>
   );
 }

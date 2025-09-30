@@ -1,0 +1,26 @@
+footer {
+  background-color: var(--mainDarkBg);
+}
+
+footer .footerContainer .footerTab:nth-child(1) {
+  width: 20%;
+}
+
+footer .footerContainer .footerTab img {
+  background-color: var(--mainWhite);
+}
+
+footer .footerContainer .footerTab h3 {
+  color: var(--mainWhite);
+}
+
+footer .footerContainer .footerTab ul li a {
+  color: var(--mainWhite);
+}
+
+.copyright {
+  background-color: var(--mainText);
+  padding: 1rem;
+  text-align: center;
+  color: var(--mainWhite);
+}

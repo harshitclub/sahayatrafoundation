@@ -13,11 +13,17 @@ const partners = [
 
 const Partners = () => {
   return (
-    <section className="w-full flex items-center justify-center py-20 bg-gray-50">
+    <section
+      className="w-full flex items-center justify-center py-20 bg-gray-50"
+      aria-labelledby="partners-heading"
+    >
       <div className="maxWidth width90">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          <h2
+            id="partners-heading"
+            className="text-3xl md:text-4xl font-bold text-gray-800"
+          >
             Our Partners
             <span className="block w-16 h-1 bg-[#7c122e] mx-auto mt-4 rounded-full"></span>
           </h2>
@@ -28,16 +34,21 @@ const Partners = () => {
         </div>
 
         {/* Logos */}
-        <div className="flex flex-wrap items-center justify-center gap-10">
+        <ul className="flex flex-wrap items-center justify-center gap-10">
           {partners.map((p) => (
-            <div
+            <li
               key={p.id}
               className="flex items-center justify-center grayscale hover:grayscale-0 transition"
             >
-              <Image src={p.logo} alt={p.name} width={140} height={60} />
-            </div>
+              <Image
+                src={p.logo}
+                alt={`${p.name} logo`}
+                width={140}
+                height={60}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

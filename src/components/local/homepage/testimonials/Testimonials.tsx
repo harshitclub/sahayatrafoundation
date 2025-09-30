@@ -28,11 +28,17 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="w-full flex items-center justify-center py-20 bg-white">
+    <section
+      className="w-full flex items-center justify-center py-20 bg-white"
+      aria-labelledby="testimonials-heading"
+    >
       <div className="maxWidth width90">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          <h2
+            id="testimonials-heading"
+            className="text-3xl md:text-4xl font-bold text-gray-800"
+          >
             Testimonials
             <span className="block w-16 h-1 bg-[#7c122e] mx-auto mt-4 rounded-full"></span>
           </h2>
@@ -45,21 +51,30 @@ const Testimonials = () => {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
-            <div
+            <article
               key={t.id}
-              className="bg-gray-50 rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-xl transition"
+              className="bg-gray-50 rounded-sm shadow-sm p-6 flex flex-col items-center text-center hover:shadow-xl transition"
             >
               <Image
                 src={t.img}
-                alt={t.name}
+                alt=""
+                aria-hidden="true"
                 width={80}
                 height={80}
                 className="rounded-full mb-4"
               />
-              <p className="text-gray-700 italic">“{t.text}”</p>
-              <h4 className="mt-4 font-semibold text-gray-900">{t.name}</h4>
-              <span className="text-sm text-gray-500">{t.role}</span>
-            </div>
+
+              <blockquote className="text-gray-700 italic">
+                <p>“{t.text}”</p>
+              </blockquote>
+
+              <div className="mt-4">
+                <cite className="not-italic font-semibold text-gray-900 block">
+                  {t.name}
+                </cite>
+                <span className="text-sm text-gray-500">{t.role}</span>
+              </div>
+            </article>
           ))}
         </div>
       </div>

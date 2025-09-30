@@ -22,21 +22,29 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="hero w-full relative">
-      <div className="heroSlider">
+    <section
+      className="hero w-full relative"
+      role="banner"
+      aria-label="Hero section with rotating images and introduction message"
+    >
+      {/* Carousel wrapper */}
+      <div className="heroSlider" aria-live="polite" aria-atomic="true">
         {images.map((img, index) => (
           <Image
             key={index}
             src={img}
-            alt={`slider ${index}`}
+            alt=""
+            aria-hidden={index !== currentIndex}
             fill
             className={`sliderImage ${index === currentIndex ? "active" : ""}`}
-            priority
+            priority={index === 0}
           />
         ))}
 
-        <div className="overlay"></div>
+        {/* Overlay */}
+        <div className="overlay" aria-hidden="true"></div>
 
+        {/* Hero content */}
         <div className="heroContent flex flex-col items-center width90 maxWidth">
           <h1>
             Together for Change, Together for

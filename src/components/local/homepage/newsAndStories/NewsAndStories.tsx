@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import women from "@/media/aboutSec/aboutSecImage.jpg";
 
-// Dummy data (baad me tu API ya DB se replace kar sakta hai)
+// Dummy data
 const stories = [
   {
     id: 1,
@@ -31,11 +31,17 @@ const stories = [
 
 const NewsAndStories = () => {
   return (
-    <section className="newsAndStoriesSec w-full flex items-center justify-center py-20 bg-gray-50">
+    <section
+      className="newsAndStoriesSec w-full flex items-center justify-center py-20 bg-gray-50"
+      aria-labelledby="news-heading"
+    >
       <div className="nAndSSContainer maxWidth width90">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block">
+          <h2
+            id="news-heading"
+            className="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block"
+          >
             News & Stories
             <span className="block w-16 h-1 bg-[#7c122e] mx-auto mt-4 rounded-full"></span>
           </h2>
@@ -48,7 +54,7 @@ const NewsAndStories = () => {
         {/* Grid of stories */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {stories.map((story) => (
-            <div
+            <article
               key={story.id}
               className="bg-white rounded-sm shadow-sm overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
@@ -56,7 +62,8 @@ const NewsAndStories = () => {
               <div className="relative w-full h-48">
                 <Image
                   src={story.img}
-                  alt={story.title}
+                  alt=""
+                  aria-hidden="true"
                   fill
                   className="object-cover"
                 />
@@ -64,7 +71,12 @@ const NewsAndStories = () => {
 
               {/* Content */}
               <div className="p-5 flex flex-col">
-                <span className="text-sm text-gray-500">{story.date}</span>
+                <time
+                  className="text-sm text-gray-500"
+                  dateTime={new Date(story.date).toISOString()}
+                >
+                  {story.date}
+                </time>
                 <h3 className="mt-2 text-lg font-semibold text-gray-800">
                   {story.title}
                 </h3>
@@ -75,11 +87,12 @@ const NewsAndStories = () => {
                 <Link
                   href="#"
                   className="mt-4 text-[#7c122e] font-medium hover:underline"
+                  aria-label={`Read more about: ${story.title}`}
                 >
                   Read More ➝
                 </Link>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
@@ -88,6 +101,7 @@ const NewsAndStories = () => {
           <Link
             href="/news"
             className="px-6 py-5 bg-[#7c122e] text-white font-semibold rounded-4xl hover:bg-[#5a0e22] transition-colors"
+            aria-label="View all stories in News section"
           >
             View All Stories
           </Link>
