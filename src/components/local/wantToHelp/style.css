@@ -1,0 +1,22 @@
+.wantToHelp {
+  background-color: var(--mainColor);
+  padding: 5rem 0;
+}
+
+.wantToHelp h3 {
+  color: var(--mainWhite);
+}
+
+.wantToHelp a {
+  background-color: var(--mainWhite);
+  padding: 2rem;
+  border-radius: 9999px;
+  border: 2px solid var(--mainColor);
+  font-size: 1.3rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.wantToHelp a:hover {
+  border: 2px solid #000;
+  color: #000;
+}

@@ -5,6 +5,7 @@ import NewsAndStories from "@/components/local/homepage/newsAndStories/NewsAndSt
 import Partners from "@/components/local/homepage/partners/Partners";
 import Testimonials from "@/components/local/homepage/testimonials/Testimonials";
 import WhatWeDo from "@/components/local/homepage/whatWeDo/WhatWeDo";
+import WantToHelp from "@/components/local/wantToHelp/WantToHelp";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <NewsAndStories />
         <Partners />
         <Testimonials />
+        <WantToHelp />
       </main>
     </>
   );

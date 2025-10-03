@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "./style.css";
+import WantToHelp from "@/components/local/wantToHelp/WantToHelp";
 export default function ContactUs() {
   return (
     <>
@@ -70,6 +71,7 @@ export default function ContactUs() {
           ></iframe>
         </div>
       </section>
+      <WantToHelp />
     </>
   );
 }

@@ -1,0 +1,19 @@
+.legal {
+  margin: 6rem 0 0 0;
+  padding: 2rem 0;
+}
+
+.legalContainer {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.legalContent h2 {
+  margin-top: 2rem;
+}
+
+.legalContent p {
+  margin-top: 0.75rem;
+  line-height: 1.7;
+}

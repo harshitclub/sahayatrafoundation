@@ -1,0 +1,55 @@
+.aboutUs {
+  margin: 6rem 0 0 0;
+}
+
+.aboutUsHeader {
+  background: linear-gradient(rgb(0, 0, 0, 0.6), rgb(0, 0, 0, 0.6)),
+    url(../../../../media/aboutus/headerImage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  color: var(--mainWhite);
+}
+
+.aboutUsPara {
+  background-color: var(--mainWhiteBg);
+  padding: 5rem 0;
+}
+
+.aboutUsPara p {
+  line-height: 2rem;
+}
+
+.aboutUsPara p span {
+  color: var(--mainColor);
+}
+
+.aboutMissionVision {
+  margin: 5rem 0;
+}
+
+.aboutMVLeft {
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8)),
+    url(../../../../media/aboutus/mission.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  width: calc(100% / 2);
+  padding: 3rem;
+  height: 60vh;
+  color: var(--mainWhite);
+}
+
+.aboutMVRight {
+  background: linear-gradient(rgb(0, 0, 0, 0.2), rgb(0, 0, 0, 0.8)),
+    url(../../../../media/aboutus/vision.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  width: calc(100% / 2);
+  padding: 3rem;
+  color: var(--mainWhite);
+}

@@ -51,17 +51,17 @@ export default function Navbar() {
               </Link>
             </li>
             <li role="none" className="desktopHide">
-              <Link role="menuitem" href="#">
+              <Link role="menuitem" href="/about-us">
                 Vision & Mission
               </Link>
             </li>
             <li role="none" className="desktopHide">
-              <Link role="menuitem" href="#">
+              <Link role="menuitem" href="/about-us">
                 Our Approach
               </Link>
             </li>
             <li role="none" className="desktopHide">
-              <Link role="menuitem" href="#">
+              <Link role="menuitem" href="/about-us">
                 Our Impact
               </Link>
             </li>
@@ -132,22 +132,22 @@ export default function Navbar() {
               </button>
               <ul className="mobileHide" role="menu">
                 <li role="none">
-                  <Link role="menuitem" href="#">
+                  <Link role="menuitem" href="/about-us">
                     About Us
                   </Link>
                 </li>
                 <li role="none">
-                  <Link role="menuitem" href="#">
+                  <Link role="menuitem" href="/about-us">
                     Vision & Mission
                   </Link>
                 </li>
                 <li role="none">
-                  <Link role="menuitem" href="#">
+                  <Link role="menuitem" href="/about-us">
                     Our Approach
                   </Link>
                 </li>
                 <li role="none">
-                  <Link role="menuitem" href="#">
+                  <Link role="menuitem" href="/about-us">
                     Our Impact
                   </Link>
                 </li>

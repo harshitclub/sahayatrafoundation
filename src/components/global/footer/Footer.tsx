@@ -15,10 +15,10 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-2">Pages</h3>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="#">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="#">About</Link>
+                <Link href="/about-us">About</Link>
               </li>
               <li>
                 <Link href="#">What We Do</Link>
@@ -27,7 +27,7 @@ export default function Footer() {
                 <Link href="#">Get Involved</Link>
               </li>
               <li>
-                <Link href="#">Contact Us</Link>
+                <Link href="/contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -55,10 +55,10 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-2">Foundation</h3>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="#">Vision & Mission</Link>
+                <Link href="/about-us">Vision & Mission</Link>
               </li>
               <li>
-                <Link href="#">Our Impact</Link>
+                <Link href="/about-us">Our Impact</Link>
               </li>
               <li>
                 <Link href="#">Donate</Link>
@@ -75,16 +75,16 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-2">Legal</h3>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="#">Donation Policy</Link>
+                <Link href="/donation-policy">Donation Policy</Link>
               </li>
               <li>
-                <Link href="#">Privacy & Policy</Link>
+                <Link href="/privacy-and-policy">Privacy & Policy</Link>
               </li>
               <li>
-                <Link href="#">Terms & Conditions</Link>
+                <Link href="/terms-and-conditions">Terms & Conditions</Link>
               </li>
               <li>
-                <Link href="#">Cookie Policy</Link>
+                <Link href="/cookie-policy">Cookie Policy</Link>
               </li>
             </ul>
           </div>
